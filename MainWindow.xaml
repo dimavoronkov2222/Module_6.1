@@ -5,8 +5,65 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Module_6._1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="MainWindow" Height="1030" Width="1249">
+    <Grid Margin="0,0,0,-6">
+        <Label Content="Title" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtTitle" HorizontalAlignment="Left" Height="23" Margin="140,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Studio" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtStudio" HorizontalAlignment="Left" Height="23" Margin="140,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.512,0.432"/>
+        <Label Content="Genre" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtGenre" HorizontalAlignment="Left" Height="23" Margin="140,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Release Date" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtReleaseDate" HorizontalAlignment="Left" Height="23" Margin="140,94,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Game Mode" HorizontalAlignment="Left" Margin="10,122,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtGameMode" HorizontalAlignment="Left" Height="23" Margin="140,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Number Of Sales" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNumberOfSales" HorizontalAlignment="Left" Height="23" Margin="140,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Description" HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtDescription" HorizontalAlignment="Left" Height="23" Margin="140,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Platform" HorizontalAlignment="Left" Margin="10,206,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPlatform" HorizontalAlignment="Left" Height="23" Margin="140,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Rating" HorizontalAlignment="Left" Margin="10,234,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtRating" HorizontalAlignment="Left" Height="23" Margin="140,234,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Add Game" HorizontalAlignment="Left" Margin="10,274,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_7"/>
+        <Button Content="Update Game" HorizontalAlignment="Left" Margin="90,274,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_6"/>
+        <Button Content="Delete Game" HorizontalAlignment="Left" Margin="170,274,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_5"/>
+        <Button Content="Search By Year" HorizontalAlignment="Left" Margin="250,274,0,0" VerticalAlignment="Top" Width="103" Click="Button_Click_4"/>
+        <Button Content="Search By Studio" HorizontalAlignment="Left" Margin="358,274,0,0" VerticalAlignment="Top" Width="95" Click="Button_Click_1"/>
+        <Button Content="Search By Name" HorizontalAlignment="Left" Margin="458,274,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click"/>
+        <Button Content="Search By Studio and Name" HorizontalAlignment="Left" Margin="556,274,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click_2"/>
+        <Button Content="Search By Style" HorizontalAlignment="Left" Margin="10,299,0,0" VerticalAlignment="Top" Width="91" Click="Button_Click_3"/>
+        <Button Content="Display Game With Max Sales By Style" HorizontalAlignment="Left" Margin="106,299,0,0" VerticalAlignment="Top" Width="214" Click="DisplayGameWithMaxSalesByStyle"/>
+        <Button Content="Display Top Five Popular Games By Style" HorizontalAlignment="Left" Margin="325,299,0,0" VerticalAlignment="Top" Width="226" Click="DisplayTopFivePopularGamesByStyle"/>
+        <Button Content="Display Top Five Unpopular Games By Style" HorizontalAlignment="Left" Margin="556,299,0,0" VerticalAlignment="Top" Width="244" Click="DisplayTopFiveUnpopularGamesByStyle"/>
+        <Button Content="Display Full Game Info" HorizontalAlignment="Left" Margin="10,324,0,0" VerticalAlignment="Top" Width="140" Click="DisplayFullGameInfo"/>
+        <Button Content="Display Studio And Most Created Style" HorizontalAlignment="Left" Margin="155,324,0,0" VerticalAlignment="Top" Width="211" Click="DisplayStudioAndMostCreatedStyle"/>
+        <ListBox x:Name="gameListBox" HorizontalAlignment="Left" Height="616" Margin="24,376,0,0" VerticalAlignment="Top" Width="1193"/>
+        <Label Content="Year" HorizontalAlignment="Left" Margin="488,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="yearTextBox" HorizontalAlignment="Left" Height="23" Margin="618,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Unpopular Style" HorizontalAlignment="Left" Margin="488,38,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="styleTextBoxForUnpopular" HorizontalAlignment="Left" Height="23" Margin="618,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Popular Style" HorizontalAlignment="Left" Margin="488,66,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="styleTextBoxForPopular" HorizontalAlignment="Left" Height="23" Margin="618,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Max Sales Style" HorizontalAlignment="Left" Margin="488,94,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="styleTextBoxForMaxSales" HorizontalAlignment="Left" Height="23" Margin="618,94,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Style" HorizontalAlignment="Left" Margin="488,122,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="styleTextBox" HorizontalAlignment="Left" Height="23" Margin="618,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Studio" HorizontalAlignment="Left" Margin="488,150,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="studioTextBox" HorizontalAlignment="Left" Height="23" Margin="618,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Studio Game" HorizontalAlignment="Left" Margin="488,178,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="studioGameTextBox" HorizontalAlignment="Left" Height="23" Margin="618,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="488,206,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Height="23" Margin="618,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Game ID" HorizontalAlignment="Left" Margin="488,234,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="gameIdTextBox" HorizontalAlignment="Left" Height="23" Margin="618,234,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Top 3 Genres" Click="DisplayTop3GenresBySales" Width="120" Height="30" Margin="879,259,250,731"/>
+        <Button Content="Most Popular Genre" Click="DisplayMostPopularGenreBySales" Height="30" Margin="879,294,233,696"/>
+        <Button Content="Top 3 Single Player Games" Click="DisplayTop3SinglePlayerGamesBySales" Height="30" Margin="798,329,291,661"/>
+        <Button Content="Top 3 Multiplayer Games" Click="DisplayTop3MultiplayerGamesBySales" Margin="721,274,375,726"/>
+        <Button Content="Most Popular Single Player Game" Click="DisplayMostPopularSinglePlayerGameBySales" Height="30" Margin="571,324,465,666"/>
+        <Button Content="Most Popular Multiplayer Game" Click="DisplayMostPopularMultiplayerGameBySales" Height="30" Margin="378,324,673,666"/>
+        <Button Content="Delete Games With Zero Sales" Click="DeleteGamesWithZeroSales" Margin="985,324,93,666" />
+        <Button Content="Delete Games With Sales Equal To" Click="DeleteGamesWithSalesEqualTo" Margin="922,198,132,783" />
     </Grid>
 </Window>
